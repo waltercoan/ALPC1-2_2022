@@ -34,4 +34,4 @@ salliq = valbruto - valinss
 #SAIDAS
 print("O valor do salario bruto e %.2f" % valbruto)
 print("O valor do INSS e %.2f" % valinss)
-print(f"O valor do salario liq e {salliq}")
+print(f"O valor do salario liq e \n {salliq}")
