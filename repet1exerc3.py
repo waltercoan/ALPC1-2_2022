@@ -18,7 +18,7 @@ while contador <= n:
     print(fat,"!=",end=" ")
     result = 1
     while fat > 0:
-        #print("\t", fat)
+        print("\t", fat)
         result = result * fat
         fat = fat - 1
     print(result)
