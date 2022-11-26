@@ -18,6 +18,9 @@ numturmas = int(input())
 contatotal = 0
 omaiornummeninos = 0
 salamaiornumero = 0
+
+omenornummeninas = 0
+salamenornumero = 0
 for turma in range(numturmas):
     print("Turma: ", turma+1)
     print("Digite o num da sala")
@@ -25,20 +28,33 @@ for turma in range(numturmas):
     print("Digite o numero de alunos")
     numalunos = int(input())
     contameninos = 0
+    contameninas = 0 
     for aluno in range(numalunos):
         print("Aluno: ", aluno+1)
         print("Digite o sexo m/f")
         sexo = input()
         if sexo == 'm' or sexo == "M":
             contameninos += 1
+        if sexo == 'f' or sexo == 'F':
+            contameninas = contameninas + 1
         #Número total de crianças na creche.
         contatotal += 1
         #c. O numero da sala com o maior número de meninos.
+    qtdmeninasturma = numalunos - contameninos
     if contameninos > omaiornummeninos:
         omaiornummeninos = contameninos
         salamaiornumero = sala
+    if turma == 0:
+        omenornummeninas = contameninas
+        salamenornumero = sala
+    else:
+        if contameninas < omenornummeninas:
+            omenornummeninas = contameninas
+            salamenornumero = sala
+
 print("O numero total de crianças e: ", contatotal)
 #b. Média de alunos considerando todas as salas.
 media = contatotal / numturmas
 print("Num medio de alunos por turma e :", media)
 print("A sala ", salamaiornumero, " possui maior numero de meninos")
+print("A sala ", salamenornumero, " possui menor numero de meninas")
