@@ -56,6 +56,7 @@ P     %
 q4    P
 10 * P = q4 * 100
 P = (q4 * 100) / 10
+
 '''
 perccanal4 = qtdcanal4 * 100 / 10
 print("O perc do canal 4 e ", perccanal4)
